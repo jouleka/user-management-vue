@@ -185,7 +185,7 @@ function validateForm(): boolean {
 
   if (!formData.phone.trim()) {
     errors.phone = ['Phone Nr is required']
-  } else if (!/^\+?[0-9\s\-\(\)]+$/.test(formData.phone)) {
+  } else if (!/^\+?[0-9\s\-()]+$/.test(formData.phone)) {
     errors.phone = ['Invalid phone number']
   }
 

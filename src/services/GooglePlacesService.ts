@@ -25,7 +25,7 @@ export class GooglePlacesService {
         try {
           const loader = () => {
             const script = document.createElement('script')
-            script.src = `https://maps.googleapis.com/maps/api/js?key=${apiKey}&libraries=places&callback=initGoogleMaps&loading=async`
+            script.src = `https://maps.googleapis.com/maps/api/js?key=${encodeURIComponent(apiKey)}&libraries=places&callback=initGoogleMaps&loading=async`
             script.defer = true
 
             window.initGoogleMaps = () => {
